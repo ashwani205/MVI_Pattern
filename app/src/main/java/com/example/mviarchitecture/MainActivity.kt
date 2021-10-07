@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
         observeViewModel()
         setupClicks()
-        progressBar = progressBar1
     }
 
     private fun setupClicks() {
@@ -77,6 +76,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun observeViewModel() {
+        progressBar = progressBar1
+
         lifecycleScope.launch {
             mainViewModel.state.collect {
                 when (it) {

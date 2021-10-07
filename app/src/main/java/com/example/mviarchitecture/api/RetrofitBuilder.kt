@@ -6,7 +6,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 object RetrofitBuilder {
 
     //    private const val BASE_URL = "https://test.mockapi.io"
-    private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    private const val BASE_URL = "https://5e510330f2c0d300147c034c.mockapi.io/"
     private fun getRetrofit() = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create())

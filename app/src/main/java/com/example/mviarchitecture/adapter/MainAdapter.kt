@@ -14,7 +14,7 @@ class MainAdapter(private val users: ArrayList<User>) :
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {
             itemView.textViewUserName.text = user.name
-            itemView.textViewUserEmail.text = user.title
+            itemView.textViewUserEmail.text = user.email
             Glide.with(itemView.imageViewAvatar.context)
                 .load(user.avatar)
                 .into(itemView.imageViewAvatar)
