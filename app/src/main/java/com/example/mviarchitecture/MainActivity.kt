@@ -12,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mviarchitecture.R
 import com.example.mviarchitecture.adapter.MainAdapter
 import com.example.mviarchitecture.api.ApiHelperImpl
 import com.example.mviarchitecture.api.RetrofitBuilder
