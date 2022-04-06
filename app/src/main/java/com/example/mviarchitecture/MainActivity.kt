@@ -21,6 +21,9 @@ import com.example.mviarchitecture.model.MainViewModel
 import com.example.mviarchitecture.model.User
 import com.example.mviarchitecture.model.ViewModelFactory
 import com.example.mviarchitecture.viewstate.MainState
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -41,6 +44,11 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
         observeViewModel()
         setupClicks()
+        AppCenter.start(
+            application, "c6c9f137-37f8-4daa-8d47-b706f4f97f72",
+            Analytics::class.java, Crashes::class.java
+        )
+
     }
 
     private fun setupClicks() {
